@@ -13,9 +13,12 @@ class PeranController extends Controller
 {
     public function index()
     {
+        $peran = new Peran;
+
+        
         $peran = Peran::all();
-        $film = Film::all();
-        $cast = Cast::all();
+        $film1 = Film::all();
+        $cast1 = Cast::all();
         return view('peran.index',compact('peran'));
     }
 
@@ -28,7 +31,10 @@ class PeranController extends Controller
     {
         //
         $peran = new Peran;
+        $film1 = new Film;
+        $cast1 = new Cast;
 
+        $peran = Peran::all();
         $film = Film::all();
         $cast = Cast::all();
         return view('peran.create', compact('peran'));
@@ -42,8 +48,8 @@ class PeranController extends Controller
      */
     public function store(Request $request)
     {
-        $film = Film::all();
-        $cast = Cast::all();
+        $film1 = Film::all();
+        $cast1 = Cast::all();
         $peran = new Peran;
 
 
@@ -89,8 +95,10 @@ class PeranController extends Controller
      */
     public function edit($id)
     {
-        $film = Film::all();
-        $cast = Cast::all();
+
+
+        $film1 = Film::all();
+        $cast1 = Cast::all();
         $peran = Peran::where('id',$id)->first();
 
         return view('peran.edit', compact('peran'));
@@ -106,8 +114,8 @@ class PeranController extends Controller
     public function update(Request $request, $id)
     {
 
-        $film = Film::all();
-        $cast = Cast::all();
+        $film1 = Film::all();
+        $cast1 = Cast::all();
 
         $peran = new Peran;
 

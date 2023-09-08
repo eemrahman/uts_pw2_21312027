@@ -25,7 +25,7 @@
             <label>Film</label>
             <select class = "form-control" name="film">
                 <option value="">Pilih Film</option>
-                @forelse ($film as $key => $item)
+                @forelse ($film1 as $key => $item)
                 <option value="{{ $item['id'] }}">{{ $item['judul'] }}</option>
                 @empty
                 @endforelse
@@ -39,7 +39,7 @@
             <label>Cast</label>
             <select class = "form-control" name="cast">
                 <option value="">Pilih Cast</option>
-                @forelse ($cast as $key => $item)
+                @forelse ($cast1 as $key => $item)
                 <option value="{{ $item['id'] }}">{{ $item['nama'] }}</option>
                 @empty
                 @endforelse
